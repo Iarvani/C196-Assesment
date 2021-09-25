@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main"
+    tools:context=".MainActivity"
+    android:gravity="start"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="@dimen/main_cardview_layout_margin_startend"
+        android:layout_marginEnd="@dimen/main_cardview_layout_margin_startend"
+        app:cardCornerRadius="@dimen/main_cardview_corner_rad"
+        android:minHeight="@dimen/main_cardview_minheight">
+
+        <ImageButton
+            android:id="@+id/btn_terms"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:background="@color/transparent"
+            android:contentDescription="@string/view_terms"
+            android:onClick="showTerms" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_term_icon"/>
+
+            <TextView
+                android:id="@+id/label_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingEnd="@dimen/main_cardview_text_padding"
+                android:paddingStart="@dimen/main_cardview_text_padding"
+                android:text="@string/term_title"
+                android:textSize="@dimen/main_cardview_text_size" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/main_status_margin"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center|end"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="center"
+                android:minWidth="@dimen/main_status_circle"
+                android:minHeight="@dimen/main_status_circle">
+
+                <TextView
+                    android:id="@+id/status_terms_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/main_status_text_size"
+                    android:padding="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="@dimen/main_cardview_layout_margin_startend"
+        android:layout_marginEnd="@dimen/main_cardview_layout_margin_startend"
+        app:cardCornerRadius="@dimen/main_cardview_corner_rad"
+        android:minHeight="@dimen/main_cardview_minheight">
+
+        <ImageButton
+            android:background="@color/transparent"
+            android:layout_gravity="bottom"
+            android:id="@+id/btn_courses"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="showCourses"
+            android:contentDescription="@string/course_title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_courses_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="@dimen/main_cardview_text_padding"
+                android:paddingStart="@dimen/main_cardview_text_padding"
+                android:id="@+id/label_courses"
+                android:layout_gravity="center"
+                android:textSize="@dimen/main_cardview_text_size"
+                android:text="@string/course_title"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/main_status_margin"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center|end"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="center"
+                android:minWidth="@dimen/main_status_circle"
+                android:minHeight="@dimen/main_status_circle">
+
+                <TextView
+                    android:id="@+id/status_courses_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/main_status_text_size"
+                    android:padding="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="@dimen/main_cardview_layout_margin_startend"
+        android:layout_marginEnd="@dimen/main_cardview_layout_margin_startend"
+        app:cardCornerRadius="@dimen/main_cardview_corner_rad"
+        android:minHeight="@dimen/main_cardview_minheight">
+
+        <ImageButton
+            android:background="@color/transparent"
+            android:layout_gravity="bottom"
+            android:id="@+id/btn_assessments"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:onClick="showAssessments"
+            android:contentDescription="@string/assessments_title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_assessments_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/main_cardview_layout_margin_startend"
+                android:layout_marginEnd="@dimen/main_cardview_layout_margin_startend"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:id="@+id/label_assessments"
+                android:layout_gravity="center"
+                android:textSize="@dimen/main_cardview_text_size"
+                android:text="@string/assessments_title"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/main_status_margin"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center|end"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="center"
+                android:minWidth="@dimen/main_status_circle"
+                android:minHeight="@dimen/main_status_circle">
+
+                <TextView
+                    android:id="@+id/status_assessments_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/main_status_text_size"
+                    android:padding="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="@dimen/main_cardview_layout_margin_startend"
+        android:layout_marginEnd="@dimen/main_cardview_layout_margin_startend"
+        app:cardCornerRadius="@dimen/main_cardview_corner_rad"
+        android:minHeight="@dimen/main_cardview_minheight">
+
+        <ImageButton
+            android:background="@color/transparent"
+            android:layout_gravity="bottom"
+            android:id="@+id/btn_mentors"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:contentDescription="@string/assessments_title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start|center"
+                android:padding="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_instructor_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/main_cardview_layout_margin_startend"
+                android:layout_marginEnd="@dimen/main_cardview_layout_margin_startend"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:id="@+id/label_mentors"
+                android:layout_gravity="center"
+                android:textSize="@dimen/main_cardview_text_size"
+                android:text="@string/instructor_title"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/main_status_margin"
+                android:layout_marginEnd="20dp"
+                android:layout_gravity="center|end"
+                android:background="@drawable/rounded_corners"
+                android:backgroundTint="@color/colorAccent"
+                android:gravity="center"
+                android:minWidth="@dimen/main_status_circle"
+                android:minHeight="@dimen/main_status_circle">
+
+                <TextView
+                    android:id="@+id/status_mentors_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="@dimen/main_status_text_size"
+                    android:padding="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".TermEditActivity"
+    tools:showIn="@layout/activity_term_edit">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/term_edit_title"
+            android:layout_margin="@dimen/text_margin"
+            android:hint="@string/edit_title"
+            android:autofillHints="@string/edit_title"
+            android:inputType="textCapWords"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/term_edit_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:layout_marginTop="16dp"
+            android:hint="@string/start_title"
+            android:inputType="date"
+            app:layout_constraintEnd_toStartOf="@+id/term_edit_start_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/term_edit_title" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/edit_icon_size"
+            android:minHeight="@dimen/edit_icon_size"
+            android:id="@+id/term_edit_start_btn"
+            android:background="@drawable/ic_term_icon"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/text_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/term_edit_title"
+            android:contentDescription="@string/start_title" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/term_edit_end"
+            android:hint="@string/end_title"
+            android:layout_margin="@dimen/text_margin"
+            app:layout_constraintTop_toBottomOf="@+id/term_edit_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/term_edit_end_btn"
+            android:inputType="date" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/edit_icon_size"
+            android:minHeight="@dimen/edit_icon_size"
+            android:scaleType="fitXY"
+            android:id="@+id/term_edit_end_btn"
+            android:background="@drawable/ic_term_icon"
+            android:layout_margin="@dimen/text_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/term_edit_start_btn"
+            android:contentDescription="@string/select_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

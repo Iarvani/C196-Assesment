@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".CourseEditActivity"
+    tools:showIn="@layout/activity_course_edit">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/course_edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:hint="@string/edit_title"
+            android:autofillHints="@string/edit_title"
+            android:inputType="textCapWords"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/course_edit_start"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:layout_marginTop="16dp"
+            android:hint="@string/start_title"
+            android:inputType="date"
+            app:layout_constraintEnd_toStartOf="@+id/course_edit_start_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course_edit_title" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/edit_icon_size"
+            android:minHeight="@dimen/edit_icon_size"
+            android:id="@+id/course_edit_start_btn"
+            android:background="@drawable/ic_term_icon"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/text_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course_edit_title"
+            android:contentDescription="@string/select_title" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/course_edit_end"
+            android:hint="@string/course_edit_end_hint"
+            android:layout_margin="@dimen/text_margin"
+            app:layout_constraintTop_toBottomOf="@+id/course_edit_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/course_edit_end_btn"
+            android:inputType="date" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/edit_icon_size"
+            android:minHeight="@dimen/edit_icon_size"
+            android:scaleType="fitXY"
+            android:id="@+id/course_edit_end_btn"
+            android:background="@drawable/ic_term_icon"
+            android:layout_margin="@dimen/text_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course_edit_start_btn"
+            android:contentDescription="@string/select_title" />
+
+        <TextView
+            android:id="@+id/course_edit_status_label"
+            android:layout_width="@dimen/detail_label_width"
+            android:layout_height="wrap_content"
+            android:text="@string/course_edit_status_label"
+            android:layout_margin="@dimen/text_margin"
+            app:layout_constraintTop_toBottomOf="@+id/course_edit_end"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="20sp"/>
+
+        <Spinner
+            android:id="@+id/course_edit_status_dropdown"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:layout_margin="@dimen/text_margin"
+            app:layout_constraintTop_toBottomOf="@+id/course_edit_status_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/course_edit_status_dropdown"/>
+
+        <EditText
+            android:id="@+id/course_edit_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:hint="@string/course_edit_note_hint"
+            android:inputType="textCapSentences"
+            app:layout_constraintTop_toBottomOf="@+id/course_edit_status_dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
